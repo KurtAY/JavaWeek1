@@ -1,14 +1,42 @@
 
-public class Books extends Store {
+public class Books extends store{
 
-	int Isbn;
-	String Author;
+	int ISBN;
+	String author;
 	
-	public Books (int ProductID, String titleName, int Isbn, String Author)
+	public Books(int ProductID, String titleName, String maker, int ISBN, String author) 
 	{
-		super(ProductID, titleName);
+		super(ProductID, titleName, maker);
 		
-		this.Isbn = Isbn;
-		this.Author = Author;
+		this.ISBN = ISBN;
+		this.author = author;
+	}
+
+	public Books(String bookName, String bookAuthor) {
+		
+	}
+	
+	public Books(){
+		
+	}
+
+	public void setBookName(String booksName)
+	{
+		titleName = booksName;
+	}
+	
+	public String getBookName()
+	{
+		return titleName;
+	}
+	
+	public void setBookAuthor(String booksAuthor)
+	{
+		author = booksAuthor;
+	}
+	
+	public String getBookAuthor()
+	{
+		return author;
 	}
 }
